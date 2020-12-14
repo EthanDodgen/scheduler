@@ -19,12 +19,23 @@ $(".hour").each(function() {
 })
 
 $("#row-1").click (function() {
-      //var text = $(this)
+      //console.log("tits")
+
+      var text = $(this)
       var textInput = $("<textarea>")
       $(this).replaceWith(textInput)
       textInput.trigger("focus")
-      //.addClass("form-control")
+      $()
+     
       //.val(text)
       //.text()
       //.trim()
     })
+
+
+
+$(".saveBtn").click (function() {
+      console.log("rad")
+      preventDefault()
+
+})
