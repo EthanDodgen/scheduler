@@ -19,13 +19,11 @@ $(".hour").each(function() {
 })
 
 $("#row-1").click (function() {
-      //console.log("tits")
-
       var text = $(this)
       var textInput = $("<textarea>")
       $(this).replaceWith(textInput)
       textInput.trigger("focus")
-      $()
+      
      
       //.val(text)
       //.text()
