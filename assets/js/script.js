@@ -3,10 +3,13 @@ var time = moment();
 var displayMoment = document.getElementById("currentDay");
 displayMoment.innerHTML = time.format("M-D-YYYY, h:mma");
 
-var nowTime = moment().hours()
+//var nowTime = moment().hours()
 
-
+// time/color change
 $(".hour").each(function() {
+
+      var nowTime = moment().hours()
+
       if (parseInt($(this).data("pineapple")) < nowTime) {
             $(this).next().addClass("bg-secondary")
       }
@@ -18,22 +21,16 @@ $(".hour").each(function() {
       }
 })
 
-$("#row-1").click (function() {
-      var text = $(this)
-      var textInput = $("<textarea>")
-      $(this).replaceWith(textInput)
-      textInput.trigger("focus")
-      
+//$(".col-10").click (function() {
+      //var textInput = $("<textarea>")
      
-      //.val(text)
-      //.text()
-      //.trim()
-    })
-
-
+      //$(this).replaceWith(textInput)
+      //textInput.trigger("focus")
+//})
 
 $(".saveBtn").click (function() {
-      console.log("rad")
-      preventDefault()
-
+      $(this).siblings("textarea").val()
+      //console.log("works", $(this).siblings("textarea").val())
+      var text = $(this).siblings("textarea").val()
+      console.log(text)
 })
