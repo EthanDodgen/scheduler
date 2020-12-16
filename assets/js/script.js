@@ -2,8 +2,7 @@
 var time = moment();
 var displayMoment = document.getElementById("currentDay");
 displayMoment.innerHTML = time.format("M-D-YYYY, h:mma");
-
-//var nowTime = moment().hours()
+var nowTime = moment().hours()
 
 // time/color change
 $(".hour").each(function() {
@@ -21,16 +20,20 @@ $(".hour").each(function() {
       }
 })
 
-//$(".col-10").click (function() {
-      //var textInput = $("<textarea>")
-     
-      //$(this).replaceWith(textInput)
-      //textInput.trigger("focus")
-//})
-
+//returns and saves input to local storage
 $(".saveBtn").click (function() {
       $(this).siblings("textarea").val()
-      //console.log("works", $(this).siblings("textarea").val())
+
       var text = $(this).siblings("textarea").val()
-      console.log(text)
+      //console.log(text)
+
+      localStorage.setItem("input", text)
+
+      localStorage.getItem("input")
 })
+
+
+
+
+
+
